@@ -1,0 +1,5 @@
+w=rnorm(500,0,1)
+v=filter(w,sides=2,rep(1/3,3))
+par(mfrow=c(2,1))
+tsplot(w,main='white noise')
+tsplot(v,ylim=c(-3,3),main='moving average')
