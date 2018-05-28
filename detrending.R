@@ -1,4 +1,4 @@
-fit<-lm(chicken-time(chicken),na.action=NULL) # regress chicken on time
+fit<-lm(chicken~time(chicken),na.action=NULL) # regress chicken on time
 par(mfrow=c(2,1))
 tsplot(resid(fit),main="detrended")
 tsplot(diff(chicken),main="first difference")
