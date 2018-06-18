@@ -1,3 +1,4 @@
+
 z1 = cos(2*pi*1:500/50)
 z2 = sin(2*pi*1:500/50)
 summary(fit <- lm(x~ 0 + z1 + z2)) # zero to exclude the intercept
