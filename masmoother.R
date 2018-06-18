@@ -1,0 +1,10 @@
+wgts=c(.5,rep(1,11),.5)/12
+soif=filter(soi,sides=2,filter=wgts)
+tsplot(soi)
+lines(soif,lwd=2,col=4)
+lines(ksmooth(time(soi), soi, "normal", bandwidth=1), lwd=2, col=4)
+SOI = ts(soi, freq=1);  tsplot(SOI)
+# the time scale matters (not shown)
+lines(ksmooth(time(SOI), SOI, "normal", bandwidth=12), lwd=2, col=4)
+lines(lowess(soi, f=.05), lwd=2, col=4)
+lines(lowess(soi), lty=2, lwd=2, col=2)
